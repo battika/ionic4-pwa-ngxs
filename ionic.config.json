@@ -1,5 +1,7 @@
 {
   "name": "Ionic4-pwa",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -9,7 +9,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "iphone": "ionic cordova run ios -lc --debug --target=\"iPhone-7\" -- --buildFlag=\"-UseModernBuildSystem=0\"",
+    "android": "ionic cordova run android -lc --debug -- --buildFlag=\"-UseModernBuildSystem=0\""
   },
   "private": true,
   "dependencies": {
@@ -31,6 +33,15 @@
     "@ngxs/logger-plugin": "^3.3.4",
     "@ngxs/store": "^3.3.4",
     "@types/uuid": "^3.4.4",
+    "cordova-android": "8.0.0",
+    "cordova-browser": "6.0.0",
+    "cordova-ios": "5.0.0",
+    "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-ionic-keyboard": "^2.1.3",
+    "cordova-plugin-ionic-webview": "^3.1.2",
+    "cordova-plugin-splashscreen": "^5.0.2",
+    "cordova-plugin-statusbar": "^2.4.2",
+    "cordova-plugin-whitelist": "^1.3.3",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
     "stacktrace-js": "^2.0.0",
@@ -62,5 +73,20 @@
     "tslint": "~5.12.0",
     "typescript": "~3.1.6"
   },
-  "description": "Ionic 4 starter project"
+  "description": "Ionic 4 starter project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-ionic-keyboard": {}
+    },
+    "platforms": [
+      "ios",
+      "android",
+      "browser"
+    ]
+  }
 }
